@@ -5,7 +5,6 @@
             <img v-else class="agent-icon" src="https://console.dialogflow.com/api-client/assets/img/logo-short.png" :alt="agent.displayName">
             <div class="top-head-info">
                 <div class="top-head-title">{{agent.displayName}}</div>
-                <div class="top-head-subtitle">{{(translations[lang()] && translations[lang()].poweredBy) || translations[config.fallback_lang].poweredBy}} <a target="_blank" rel="noopener noreferrer" href="https://dialogflow.cloud.ushakov.co" aria-hidden="true">Dialogflow Gateway</a></div>
             </div>
         </div>
         <slot />
@@ -46,14 +45,6 @@
     font-weight: 500
     color: var(--text)
     line-height: 15px
-
-.top-head-subtitle
-    color: var(--text-secondary)
-    font-size: 14px
-
-    a[href]
-        color: var(--text)
-        text-decoration: none
 
 .top-head-action
     @include reset
